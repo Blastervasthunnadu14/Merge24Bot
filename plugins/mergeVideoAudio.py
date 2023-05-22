@@ -85,7 +85,7 @@ async def mergeAudio(c: Client, cb: CallbackQuery, new_file_name: str):
     except MessageNotModified:
         await cb.message.edit("Sucessfully Muxed Video ! ✅")
     LOGGER.info(f"Video muxed for: {cb.from_user.first_name} ")
-    await asyncio.sleep(3)
+    await asyncio.sleep(4)
     file_size = os.path.getsize(muxed_video)
     os.rename(muxed_video, new_file_name)
     await cb.message.edit(
