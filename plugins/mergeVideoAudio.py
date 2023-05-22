@@ -91,7 +91,7 @@ async def mergeAudio(c: Client, cb: CallbackQuery, new_file_name: str):
     await cb.message.edit(
         f"🔄 Renaming Video to\n **{new_file_name.rsplit('/',1)[-1]}**"
     )
-    await asyncio.sleep(3)
+    await asyncio.sleep(4)
     merged_video_path = new_file_name
 
     if UPLOAD_TO_DRIVE[f"{cb.from_user.id}"]:
